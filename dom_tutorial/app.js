@@ -25,3 +25,17 @@ div.appendChild(pDiv);
 container.appendChild(div);
 
 container.appendChild(div);
+
+// Event listeners
+const btn = document.querySelector('#btn');
+btn.addEventListener('click', e => {
+    // e is the event
+    e.target.style.background = 'blue';
+    alert(e.target);
+  });
+
+// adding event listeners to a group of nodes 
+const btnGroup = document.querySelectorAll('#button-container > button');
+btnGroup.forEach(btn => {
+    btn.addEventListener('click', () => alert(btn.innerHTML));
+})
